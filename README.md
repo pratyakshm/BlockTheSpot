@@ -1,44 +1,21 @@
-# BlockTheSpot
+## Introduction
+Run Spotify ad-free on PC.
 
-## Video, audio & banner adblock/skip for Spotify
+## Uninstallation & Cleanup
+(**Note:** People who have used Spotify in the past or are still using it, must follow Uninstallation. If you've never installed Spotify on your PC before, you can go ahead and skip the Uninstallation part.)  
+**1.** Install Revo Uninstaller from [here](https://94f29e82f377c2c0658d-388a64d31e58fcdf2a0581c5105c02bb.ssl.cf1.rackcdn.com/revosetup.exe), or run ``winget install revouninstaller`` from PowerShell if you use Windows Package Manager.   
+<br>**2.** Open Revo Uninstaller, and uninstall Spotify from there. If you are unable to find Spotify in Revo Uninstaller, on the top bar, click on the **Windows Apps** icon and uninstall from there.  
+      (If you've uninstalled it from the Windows Apps section, it might take a few seconds to unregister the app in PowerShell. You'll need to be patient here.)  
+<br>**3.** After uninstallation, it will show an option to scan system for leftover registry keys, residual files, etc. that the installer might not have removed. Here, choose Advanced scanning process and proceed with the scan.  
+<br>**4.** Delete every registry entry that is formatted in the bold black style, and proceed. In the next screen, it will list residual files. Select all and delete them.
 
-**Current Version:** 0.13
+## Installation 
+**1.** Install this specific version of [Spotify](http://upgrade.spotify.com/upgrade/client/win32-x86/spotify_installer-1.1.4.197.g92d52c4f-13.exe).   
+**2.** Launch Spotify and login to your account.    
+**3.** Tap on the three dots icon on the top left corner of the app and tap on Help>About Spotify. Make sure that the about section **does not mention** that its a Microsoft Store version. (else, follow [this](https://github.com/pratyakshm/BlockTheSpot/blob/master/README.md#uninstallation--cleanup)).    
+**4.** Download [Install.bat](https://raw.githubusercontent.com/pratyakshm/BlockTheSpot/master/install.bat) and [netutils.dll](https://raw.githubusercontent.com/pratyakshm/BlockTheSpot/master/netutils.dll).  
+**5.** Run Install.bat as administrator.  
+**6.** Done!  
 
-**Last updated:** 5th March 2019
-
-**Last tested version:** 1.1.4.197.g92d52c4f
-
-### Important Notice
-
-If you are using Spotify 1.1.5.xxx or newer, please use run the automatic downgrade script [here](https://github.com/master131/BlockTheSpot/raw/master/downgrade.bat) which will downgrade to 1.1.4.197.g92d52c4f and also disable auto-update. Thanks @CHEF-KOCH.
-
-#### How do I re-enable automatic updates?
-
-Run Command Prompt as administrator and enter the following command:
-```
-icacls "%localappdata%\Spotify\Update" /reset /T
-```
-
-### Features:
-* Windows only
-* Set and forget
-* Blocks all banner/video/audio ads within the app
-* Retains friend, vertical video and radio functionality
-* Unlocks the skip function for any track
-
-:warning: This mod is for the [**Desktop release**](https://www.spotify.com/download/windows/) of Spotify on Windows and **not the Microsoft Store version**.
-
-### Install/Uninstall:
-
-#### Easy Installation:
-[Download](https://github.com/master131/BlockTheSpot/raw/master/install.bat) and run install.bat. You don't need to download any other file. 
-
-PS - It's not encrypted at all, it's a batch file with the mod embedded at the end (see the "MZ" header). You can always use the manual installation method.
-
-#### Manual Installation:
-[Download](https://github.com/master131/BlockTheSpot/raw/master/netutils.dll) and drop netutils.dll inside the Spotify installation folder (next to Spotify.exe).
-
-The default Spotify installation location is: %APPDATA%/Spotify (copy and paste into Explorer address bar)
-
-#### Uninstall:
-To uninstall, simply delete netutils.dll from your Spotify installation (see above for the location).
+### Credits  
+[master131](https://github.com/master131) for BlockTheSpot.
